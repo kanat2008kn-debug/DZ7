@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 *,
 *::before,
 *::after {
@@ -80,6 +81,14 @@ img {
     cursor: pointer;
 }
 
+/* .container__cart::before {
+    content: "Корзина | 1";
+}
+
+.container__cart.active::before {
+    content: "Не корзина";
+} */
+
 @media (max-width: 450px) {
     .container__butt {
         display: flex;
@@ -106,3 +115,5 @@ img {
 }
 
 /*  Header end */ 
+
+/* main */
