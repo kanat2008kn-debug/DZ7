@@ -29,9 +29,29 @@
 // })
 
 let buttonText;
-let buttonText2 = "Не кор";
+let buttonText2 = "Не корзина";
 document.querySelector(".container__cart").addEventListener("click",function(){
         buttonText = this.textContent;
         this.textContent = buttonText2;
         buttonText2 = buttonText;
 })
+
+
+let buttonsHeader = [
+       "Пицца",
+       "Паста",
+       "Супы",
+       "Салаты",
+        "Напитки",
+       "Десерты",
+       "Бакалея",
+       "Антипасти",
+       "Акции",
+       "Комбо",
+       "Контакты"
+];
+
+const list = document.querySelector('.filter-cont');
+        if (list) {
+
+        }
