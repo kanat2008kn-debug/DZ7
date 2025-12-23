@@ -67,6 +67,7 @@ img {
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    background: none;
 }
 
 .container__cart {

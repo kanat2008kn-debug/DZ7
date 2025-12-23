@@ -36,22 +36,37 @@ document.querySelector(".container__cart").addEventListener("click",function(){
         buttonText2 = buttonText;
 })
 
+document.addEventListener('DOMContentLoaded', function(){
+        let buttonsHeader = [
+               "Пицца",
+               "Паста",
+               "Супы",
+               "Салаты",
+                "Напитки",
+               "Десерты",
+               "Бакалея",
+               "Антипасти",
+               "Акции",
+               "Комбо",
+               "Контакты"
+        ];
+        
+        // const list = document.querySelector('.filter-cont');
+        // if (list) {
+        //         for(let i = 0; i < buttonsHeader.length; i++) {
+        //                 let newElement = document.createElement('a')
+        //                 newElement.textContent = buttonsHeader[i];
+        //                 list.append(newElement);
+        //         }
+        // }
 
-let buttonsHeader = [
-       "Пицца",
-       "Паста",
-       "Супы",
-       "Салаты",
-        "Напитки",
-       "Десерты",
-       "Бакалея",
-       "Антипасти",
-       "Акции",
-       "Комбо",
-       "Контакты"
-];
-
-const list = document.querySelector('.filter-cont');
-        if (list) {
-
-        }
+        const groups = document.querySelector('.filter-cont')
+        if(groups) {
+                let groupHtml = '';
+                const a = document.createElement('a');
+                for(let i = 0; i < buttonsHeader.length; i++) {
+                        groupHtml = groupHtml + `<a>${buttonsHeader[i]}</a>`
+                }
+                groups.innerHTML = groupHtml
+        };
+})
