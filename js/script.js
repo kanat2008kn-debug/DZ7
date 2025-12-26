@@ -37,6 +37,7 @@ document.querySelector(".container__cart").addEventListener("click",function(){
 })
 
 document.addEventListener('DOMContentLoaded', function(){
+        
         let buttonsHeader = [
                "Пицца",
                "Паста",
@@ -54,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function(){
         // const list = document.querySelector('.filter-cont');
         // if (list) {
         //         for(let i = 0; i < buttonsHeader.length; i++) {
-        //                 let newElement = document.createElement('a')
-        //                 newElement.textContent = buttonsHeader[i];
-        //                 list.append(newElement);
+                //                 let newElement = document.createElement('a')
+                //                 newElement.textContent = buttonsHeader[i];
+                //                 list.append(newElement);
         //         }
         // }
-
+        
         const groups = document.querySelector('.filter-cont')
         if(groups) {
                 let groupHtml = '';
@@ -69,4 +70,57 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
                 groups.innerHTML = groupHtml
         };
-})
+        
+        let buttonsSause = [
+                {
+                        icon: 'image1.png',
+                        text: 'Сырный соус',
+                        prise: '120'
+                },
+                {
+                        icon: 'image2.png',
+                        text: 'Барбекю',
+                        prise: '150'
+                },
+                {
+                        icon: 'image3.png',
+                        text: 'Ранч',
+                        prise: '160'
+                },
+                {
+                        icon: 'image4.png',
+                        text: 'Сгущенка',
+                        prise: '180'
+                },
+                 {
+                        icon: 'image5.png',
+                        text: 'Малиновое варенье',
+                        prise: '160'
+                },
+                {
+                        icon: 'image1.png',
+                        text: 'Сырный соус',
+                        prise: '120'
+                },                           
+        ];
+
+        let saucesContainer = document.querySelector('.container__sauces-list');
+        if(saucesContainer) {
+                sauseHtml = '';
+                buttonsSause.forEach(function (sause) {
+                     sauseHtml = sauseHtml + `
+                <div>
+                    <div class="container__sauses-card">
+                        <img src="${sause.icon}" alt="${sause.text}">
+                        <h3>${sause.text}</h3>
+                        <div class="container__sauses-prise">
+                                <p>от</p>
+                                <span>${sause.prise}</span>
+                                <p>₽</p>
+                        </div>
+                    </div>
+                 </div>`  
+                });
+                saucesContainer.innerHTML = sauseHtml
+        };
+});
